@@ -1,9 +1,9 @@
-# Your Name Here
+# Samuel Clackler
 # UWYO COSC 1010
-# Submission Date
+# Submission Date: 10/15/24
 # Lab 06
-# Lab Section: 
-# Sources, people worked with, help given to: 
+# Lab Section: 11
+# Sources, people worked with, help given to: Izail Chamberlain, Deacon Steiner
 # your
 # comments
 # here
@@ -64,6 +64,18 @@ zkdenxczyooloczcaahnkehbwimvieedpdlqfafbqvxvfmvabd
 random_string = random_string.replace("\n","") #remove all newline characters
 print(len(random_string)) # Print out the size for reference 
 
+dic = {}
+
+for letter in random_string:
+    if letter in dic:
+       dic[letter] += 1
+    else:
+        dic[letter] = 1
+
+mySortedDic = dict(sorted(dic.items()))
+print(mySortedDic)
+
+
 # Above is a string with 2500 characters.
 # Create a program that goes through and counts the occurrence of each character, excluding \n using a  dictionary
 # Output each letter and its corresponding occurrence in alphabetical order
@@ -87,14 +99,19 @@ print(len(random_string)) # Print out the size for reference
 
 print("*"*75)
 # Output which letter occurred the most 
-
-most_occurred = ""
-least_occurred = ""
+most_occurred = max(dic, key = dic.get)
+least_occurred = min(dic, key = dic.get)
 
 print(f"The letter that occurred the most is {most_occurred}")
 print("*"*75)
 # Output which letter occurred the least 
-print(f"The letter that occurred the most is {least_occurred}")
+print(f"The letter that occurred the least is {least_occurred}")
 print("*"*75)
 
 # Output what the percentage of the string each character is, again in alphabetical
+totDicterm = len(random_string)
+
+for key in mySortedDic:
+    print((mySortedDic[key])/totDicterm * 100)
+for key in mySortedDic:
+    print(f"{key} makes up {mySortedDic[key]/totDicterm*100}% of the Dictionary")

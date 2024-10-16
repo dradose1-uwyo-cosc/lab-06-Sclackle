@@ -1,8 +1,8 @@
-# [Name]
-## [Assignment #]
-## [Submission date: MM/DD/YY]
+# [Samuel Clackler]
+## [Assignment #6]
+## [Submission date: 10/15/24]
 ## Worked with/sources 
-* example
+* Izail Chamberlain
 * example
 * example
 * example
